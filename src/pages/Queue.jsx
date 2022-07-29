@@ -32,9 +32,11 @@ const Queue = () => {
   }, [socket]);
 
   useEffect(() => {
-    getLast('http://localhost:8080/information').then((tickets) => {
-      setTickets(tickets);
-    });
+    getLast('https://ticket-app-websocket.herokuapp.com/information').then(
+      (tickets) => {
+        setTickets(tickets);
+      }
+    );
   }, []);
 
   return (
