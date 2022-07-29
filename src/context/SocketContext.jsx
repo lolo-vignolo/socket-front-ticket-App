@@ -6,7 +6,7 @@ export const SocketContext = createContext();
 
 export const SocketProvider = ({ children }) => {
   const { socket, online } = useSocket(
-    'https://ticket-app-websocket.herokuapp.com'
+    'https://ticket-app-websocket.herokuapp.com/'
   );
 
   return (
